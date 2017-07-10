@@ -1,10 +1,9 @@
 #include <cmath>
-#include <limits>
+#include <iostream>
 #include <stack>
+#include <algorithm>
 
-using namespace std;
-
-class Solution {
+class Solution7 {
 public:
 	int count_bits(int x)
 	{
@@ -21,7 +20,7 @@ public:
 		return bits_cnt;
 	}
 	
-	// 123 -- > 3 2 1
+	// 123 -- > ³öÕ»Ë³Ðò 3 2 1
 	stack<int> process_rev(int x)
 	{
 		int y = abs(x);
@@ -37,7 +36,7 @@ public:
 		return s;
 	}
 
-	// 123 -> 1 2 3
+	// 123 -> ³öÕ»Ë³Ðò 1,2,3
 	stack<int> process_seq(int x)
 	{
 		int y = abs(x);
@@ -107,10 +106,9 @@ public:
 		}
 
 		const int sign = x > 0 ? 1 : -1;
-		// const int max_bits_cnt = count_bits(std::numeric_limits<int>::max());
-		// 2147483647
-		stack<int> s_max = process_rev(std::numeric_limits<int>::max());
-		stack<int> s2 = process_seq(x);
+
+		stack<int> s_max = process_seq(std::numeric_limits<int>::max());
+		stack<int> s2 = process_rev(x);
 
 		if (s2.size() == s_max.size())
 		{
