@@ -1,4 +1,4 @@
-class Solution7v1
+﻿class Solution7v1
 {
 public:
     int reverse(int x)

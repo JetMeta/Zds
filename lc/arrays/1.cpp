@@ -1,49 +1,51 @@
-struct UpperBound
+﻿struct UpperBound
 {
-	UpperBound(const int val) : target(val) {}
-	int target;
+    UpperBound(const int val) : target(val) {}
+    int target;
 
-	bool operator()(const int& val)
-	{
-		return val > target;
-	}
+    bool operator()(const int& val)
+    {
+        return val > target;
+    }
 };
 
 struct IsTarget
 {
-	IsTarget(const int val) : target(val) {}
-	int target;
-	bool operator()(const int& val)
-	{
-		return val == target;
-	}
+    IsTarget(const int val) : target(val) {}
+    int target;
+    bool operator()(const int& val)
+    {
+        return val == target;
+    }
 };
 
-class Solution {
+class Solution
+{
 public:
-	vector<int> twoSum(vector<int>& nums, int target) {
-		vector<int> res;
+    vector<int> twoSum(vector<int>& nums, int target)
+    {
+        vector<int> res;
 
-		for (auto it = nums.begin(); it != nums.end(); ++it)
-		{
-			const int right = target - *it;
-			
-			auto it_next = it + 1;
+        for (auto it = nums.begin(); it != nums.end(); ++it)
+        {
+            const int right = target - *it;
 
-			if (it_next < nums.end())
-			{
-				auto target_it = find_if(it_next, nums.end(), IsTarget(right));
+            auto it_next = it + 1;
 
-				if (target_it!=nums.end())
-				{
-					res.push_back(it - nums.begin());
-					res.push_back(target_it - nums.begin());
+            if (it_next < nums.end())
+            {
+                auto target_it = find_if(it_next, nums.end(), IsTarget(right));
 
-					return res;
-				}
-			}
-		}
+                if (target_it!=nums.end())
+                {
+                    res.push_back(it - nums.begin());
+                    res.push_back(target_it - nums.begin());
 
-		return res;
-	}
+                    return res;
+                }
+            }
+        }
+
+        return res;
+    }
 };
