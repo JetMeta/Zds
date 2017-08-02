@@ -1,2 +1,2 @@
-# data structure
+# ds & algo
 Oj
