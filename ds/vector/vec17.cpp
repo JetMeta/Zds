@@ -42,9 +42,11 @@
       ZdoIdx : //z 17-07-11 10:33:47 L.173'48373 T1888754067.K ~0   --+----+----+----+----+----+
       KmtIdx : //z 17-07-11 18:10:05 L.173'20995 T3628083440.K ~23  --+----+----+----+----+----+
      TimeCnt : //z 17-07-11 17:47:10 L.173'22370 T2340424821.K ~5   --+----+----+----+----+----+
-     Reg.Cnt : //z 17-07-11 17:47:09 L.173'22371 T2340424797.K ~13  --+----+----+----+----+----+
+     Reg.Cnt : //z 17-08-14 13:11:09 L.139'38931 T3000779380.K ~14  --+----+----+----+----+----+
      File.Op : //z 17-07-11 10:33:47 L.173'48373 T1888754067.K ~0   --+----+----+----+----+----+
-     Version : //z 17-07-19 15:26:11 L.165'30829 T297492121 .K ~414     R+.13   L+.534  --+----+
+     Version : //z 17-08-14 13:11:37 L.139'38903 T3000779477.K ~421     R+.14   L+.537  --+----+
+     #22  V+ : //z 17-08-14 13:11:21 L.139'38919 T3000779438.K ~418     R+.14   L+.555  
+     #21  R+ : //z 17-08-14 13:11:09 L.139'38931 T3000779380.K ~416     R+.14   L+.538  V+.416  
      #21  V+ : //z 17-07-12 15:19:52 L.172'31208 T4116771801.K ~399     R+.13   L+.538  
      #20  V+ : //z 17-07-11 18:10:05 L.173'20995 T3628083440.K ~380     R+.13   L+.525  
      #19  V+ : //z 17-07-11 17:47:19 L.173'22361 T2340424830.K ~361     R+.13   L+.502  
@@ -93,7 +95,7 @@
       L431, 12: 07-11 R#.11   @使用数组初始化 vector 
       L445, 13: 07-11 R#.12   @iterator
       L496, 14: 07-11 R#.13   @构造函数
-     Zndex_E : //z 17-07-19 15:26:11 L.165'30829 T297492121 .K ~401 --+----+----+----+----+----+
+     Zndex_E : //z 17-08-14 13:11:37 L.139'38903 T3000779477.K ~407 --+----+----+----+----+----+
      K   Ter : //z 17-07-11 10:33:47 L.173'48373 T1888754067.K ~0   --+----+----+----+----+----+
      K  Mers : //z 17-07-11 10:33:47 L.173'48373 T1888754067.K ~0   --+----+----+----+----+----+
      K Kersi : //z 17-07-11 10:33:47 L.173'48373 T1888754067.K ~0   --+----+----+----+----+----+
@@ -531,3 +533,26 @@ resize 强制把容器大小改为容纳n个元素；调用resize后，size将�
 
 reserve 强制把容器的容量改为至少n，提供的n不小于当前大小，会重分配；否则不改变其大小。
 #endregion //z 2017-07-11 17:47:09 L.173'22371 BG57IV3 T2340424797.K.F3385784024+----+----+----+
+
+#region 08-14 R#.14   @vector resize 以及 reserve 含义
+01. 
+resize() not only allocates memory, it also creates as many instances as the desired size which you pass to resize() as argument. But reserve() only allocates memory, it doesn't create instances. That is,
+
+std::vector<int> v1;
+v1.resize(1000); //allocation + instance creation
+cout <<(v1.size() == 1000)<< endl;   //prints 1
+cout <<(v1.capacity()==1000)<< endl; //prints 1
+
+std::vector<int> v2;
+v2.reserve(1000); //only allocation
+cout <<(v2.size() == 1000)<< endl;   //prints 0
+cout <<(v2.capacity()==1000)<< endl; //prints 1
+
+Output (online demo):
+1
+1
+0
+1
+
+So resize() may not be desirable, if you don't want the default-created objects. It will be slow as well. Besides, if you push_back() new elements to it, the size() of the vector will further increase by allocating new memory (which also means moving the existing elements to the newly allocated memory space). If you have used reserve() at the start to ensure there is already enough allocated memory, the size() of the vector will increase when you push_back() to it, but it will not allocate new memory again until it runs out of the space you reserved for it.
+#endregion //z 2017-08-14 13:11:09 L.139'38931 BG57IV3 T3000779380.K.F3385784024+----+----+----+
