@@ -49,14 +49,16 @@ public:
 };
 
 // 3ms, short code, final
-class Solution {
+class Solution
+{
 public:
-	int findComplement(int num) {
-		const double f2 = log10(2);
-		const double f10 = log10(num);
-		const unsigned int n = static_cast<unsigned int>(ceil(f10 / f2));
+    int findComplement(int num)
+    {
+        const double f2 = log10(2);
+        const double f10 = log10(num);
+        const unsigned int n = static_cast<unsigned int>(ceil(f10 / f2));
 
-		const int mask = 0xffffffff << n;
-		return ~(mask | num);
-	}
+        const int mask = 0xffffffff << n;
+        return ~(mask | num);
+    }
 };

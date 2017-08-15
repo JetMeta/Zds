@@ -3,7 +3,7 @@
 int main()
 {
     int min = 0;
-    int n ,u,d;
+    int n,u,d;
 
     scanf("%d",&n);
 

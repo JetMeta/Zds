@@ -36,7 +36,8 @@
 /*
  * 链表节点
  */
-typedef struct listNode {
+typedef struct listNode
+{
 
     // 前驱节点
     struct listNode *prev;
@@ -52,7 +53,8 @@ typedef struct listNode {
 /*
  * 链表迭代器
  */
-typedef struct listIter {
+typedef struct listIter
+{
 
     // 下一节点
     listNode *next;
@@ -65,7 +67,8 @@ typedef struct listIter {
 /*
  * 链表
  */
-typedef struct list {
+typedef struct list
+{
 
     // 表头指针
     listNode *head;

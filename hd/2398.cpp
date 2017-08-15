@@ -1,6 +1,6 @@
 ﻿#include <stdio.h>
 
-static void f(double s,double rate ,double t)
+static void f(double s,double rate,double t)
 {
     int i = 0;
     double fsum = s;

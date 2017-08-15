@@ -2,13 +2,13 @@
 
 int main( )
 {
-    int t , n , m ;
+    int t, n, m ;
 
-    scanf( "%d" , &t ) ;
+    scanf( "%d", &t ) ;
 
     while( t -- )
     {
-        scanf( "%d%d" , &n , &m ) ;
+        scanf( "%d%d", &n, &m ) ;
         if( n % (m+1))
         {
             printf( "Grass\n" ) ;

@@ -1,6 +1,6 @@
 ﻿#include <stdio.h>
 
-int path(int i , int j)
+int path(int i, int j)
 {
     if (i == j - 2)
     {

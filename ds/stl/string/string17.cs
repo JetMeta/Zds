@@ -41,17 +41,24 @@
       ZdoIdx : //z 17-07-12 16:20:06 L.172'27594 T1114134801.K ~0   --+----+----+----+----+----+
       KmtIdx : //z 17-07-12 16:20:06 L.172'27594 T1114134801.K ~0   --+----+----+----+----+----+
      TimeCnt : //z 17-07-12 16:20:36 L.172'27564 T1114134900.K ~1   --+----+----+----+----+----+
-     Reg.Cnt : //z 17-07-19 15:39:05 L.165'30055 T298785824 .K ~3   --+----+----+----+----+----+
+     Reg.Cnt : //z 17-08-15 17:30:58 L.138'23342 T3941821406.K ~7   --+----+----+----+----+----+
      File.Op : //z 17-07-12 16:20:06 L.172'27594 T1114134801.K ~0   --+----+----+----+----+----+
-     Version : //z 17-07-19 18:02:21 L.165'21459 T4169380471.K ~65      R+.3    L+.288  --+----+
+     Version : //z 17-08-15 17:31:32 L.138'23308 T3941857271.K ~93      R+.7    L+.350  --+----+
+     #4   R+ : //z 17-08-15 17:30:58 L.138'23342 T3941821406.K ~87      R+.7    L+.352  V+.87   
+     #4   R+ : //z 17-08-15 17:28:36 L.138'23484 T3940922913.K ~79      R+.6    L+.332  V+.79   
+     #4   V+ : //z 17-08-15 17:26:52 L.138'23588 T3940851101.K ~76      R+.5    L+.315  
+     #3   R+ : //z 17-08-15 17:26:10 L.138'23630 T3940850967.K ~73      R+.5    L+.308  V+.73   
+     #3   R+ : //z 17-08-15 17:25:40 L.138'23660 T3940815129.K ~67      R+.4    L+.296  V+.67   
      #3   R+ : //z 17-07-19 15:39:05 L.165'30055 T298785824 .K ~57      R+.3    L+.286  V+.57   
      #2   V+ : //z 17-07-19 15:35:15 L.165'30285 T298642109 .K ~38      R+.2    L+.183  
      #1   V+ : //z 17-07-19 15:30:19 L.165'30581 T298462428 .K ~19      R+.2    L+.74   
      #0   R+ : //z 17-07-19 15:26:39 L.165'30801 T297492195 .K ~12      R+.2    L+.74   V+.12   
      #0   R+ : //z 17-07-12 16:20:13 L.172'27587 T1114134831.K ~3       R+.1    L+.64   V+.3    
      Zndex_S : //z 17-07-12 16:20:06 L.172'27594 T1114134801.K ~0   --+----+----+----+----+----+
-      L63, 1: 07-12 R#.1    @了解下 string 的各种用法
-     Zndex_E : //z 17-07-19 18:02:21 L.165'21459 T4169380471.K ~62  --+----+----+----+----+----+
+      L69 ,  1: 07-12 R#.1    @了解下 string 的各种用法
+      L77 ,  2: 07-19 R#.2    @C-Strings (Character Arrays)
+      L286,  3: 07-19 R#.3    @C++ String class Examples and Tutorial
+     Zndex_E : //z 17-08-15 17:31:32 L.138'23308 T3941857271.K ~86  --+----+----+----+----+----+
      K   Ter : //z 17-07-12 16:20:06 L.172'27594 T1114134801.K ~0   --+----+----+----+----+----+
      K  Mers : //z 17-07-12 16:20:06 L.172'27594 T1114134801.K ~0   --+----+----+----+----+----+
      K Kersi : //z 17-07-12 16:20:06 L.172'27594 T1114134801.K ~0   --+----+----+----+----+----+
@@ -60,7 +67,7 @@
      K  Vers : //z 17-07-12 16:20:06 L.172'27594 T1114134801.K ~0   --+----+----+----+----+----+
      K   Ver : //z 17-07-12 16:20:06 L.172'27594 T1114134801.K ~0   --+----+----+----+----+----+
      K    Ve : //z 17-07-12 16:20:06 L.172'27594 T1114134801.K ~0   --+----+----+----+----+----+
-     K     V : //z 17-07-12 16:20:06 L.172'27594 T1114134801.K ~0   --+----+----+----+----+----+
+     K     V : //z 17-08-15 17:26:10 L.138'23630 T3940850967.K ~73      R+.5    L+.308  
      KaizenZ : //z 17-07-12 16:20:06 L.172'27594 T1114134801.K ~0   --+----+----+----+----+----+
 #endregion #HE //z 2017-07-12 16:20:06 L.172'27594 BG57IV3 T1114134801.K.F370403767 -+----+----+
 
@@ -287,3 +294,65 @@ http://www.yolinux.com/TUTORIALS/LinuxTutorialC++StringClass.html
 http://www.cprogramming.com/tutorial/string.html
 https://www.tutorialspoint.com/cplusplus/cpp_strings.htm
 #endregion //z 2017-07-19 15:39:05 L.165'30055 BG57IV3 T298785824 .K.F370403767 +----+----+----+
+
+#region 08-15 R#.4    @for 语法
+01. 
+for (auto &attack : m_attack) // access by reference to avoid copying
+{  
+    if (attack->m_num == input)
+    {
+        attack->makeDamage();
+    }
+}
+#endregion //z 2017-08-15 17:25:40 L.138'23660 BG57IV3 T3940815129.K.F370403767 +----+----+----+
+
+#region 08-15 R#.5    @to_string
+01. 
+C++11 introduces std::stoi (and variants for each numeric type) and std::to_string, the counterparts of the C atoi and itoa but expressed in term of std::string.
+
+#include <string> 
+
+std::string s = std::to_string(42);
+is therefore the shortest way I can think of.
+
+Note: see [string.conversions] (21.5 in n3242)
+
+string to_string (int val);
+string to_string (long val);
+string to_string (long long val);
+string to_string (unsigned val);
+string to_string (unsigned long val);
+string to_string (unsigned long long val);
+string to_string (float val);
+string to_string (double val);
+string to_string (long double val);
+#endregion //z 2017-08-15 17:26:10 L.138'23630 BG57IV3 T3940850967.K.F370403767 +----+----+----+
+
+#region 08-15 R#.6    @字符串的连接
+01. 
+// to_string example
+#include <iostream>   // std::cout
+#include <string>     // std::string, std::to_string
+
+int main ()
+{
+  std::string pi = "pi is " + std::to_string(3.1415926);
+  std::string perfect = std::to_string(1+2+4+7+14) + " is a perfect number";
+  std::cout << pi << '\n';
+  std::cout << perfect << '\n';
+  return 0;
+}
+
+pi is 3.141593
+28 is a perfect number
+#endregion //z 2017-08-15 17:28:36 L.138'23484 BG57IV3 T3940922913.K.F370403767 +----+----+----+
+
+#region 08-15 R#.7    @将string转换为数
+01. 
+double stod (const string&  str, size_t* idx = 0);
+double stod (const wstring& str, size_t* idx = 0);
+stof Convert string to float (function template )
+stold Convert string to long double (function template )
+stoi Convert string to integer (function template )
+strtof Convert string to float (function )
+#endregion //z 2017-08-15 17:30:58 L.138'23342 BG57IV3 T3941821406.K.F370403767 +----+----+----+

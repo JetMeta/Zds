@@ -4,7 +4,7 @@ public:
     int distributeCandies(vector<int>& candies)
     {
         int cnt = 0;
-		bitset<200001> b;
+        bitset<200001> b;
         const int max_candies = candies.size() / 2;
 
         for (auto it = candies.cbegin(); it != candies.cend(); ++it)

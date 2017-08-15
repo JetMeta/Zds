@@ -56,7 +56,7 @@ int f(int m,int n)
 int main()
 {
     int m = 0,n = 0;
-    int i = 0 ,j = 0;
+    int i = 0,j = 0;
 
     while(scanf("%d %d",&m,&n)!=EOF)
     {

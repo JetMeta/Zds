@@ -33,7 +33,7 @@ int main()
         sort(v1.begin(),v1.end());
         sort(v2.begin(),v2.end());
 
-        int i = 0 ,j = 0;
+        int i = 0,j = 0;
         vector<int>::iterator it1,it2;
         for (it1 = v1.begin(),it2=v2.begin(); it1!=v1.end(); ++it1,++it2)
         {

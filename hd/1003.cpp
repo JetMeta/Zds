@@ -86,7 +86,7 @@ void max_seq2(int sz[],int len,int n)
 int main()
 {
     int n = 0,m=0;
-    int i = 0 ,j = 0;
+    int i = 0,j = 0;
     int * psz = NULL;
 
     scanf("%d",&n);

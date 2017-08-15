@@ -46,7 +46,7 @@ static void f()
 
 int main()
 {
-    int n ,m;
+    int n,m;
 
     f();
     scanf("%d",&n);

@@ -2,7 +2,7 @@
 
 int main()
 {
-    int i = 0 , j = 0;
+    int i = 0, j = 0;
 
     while(scanf("%d %d",&i,&j)!=EOF)
     {

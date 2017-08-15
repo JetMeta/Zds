@@ -3,7 +3,7 @@
 int main()
 {
     int k = 0;
-    int i = 0 , j =0;
+    int i = 0, j =0;
     long sum = 0;
 
     while(scanf("%d %d",&i,&j)!=EOF)

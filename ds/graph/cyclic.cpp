@@ -54,15 +54,15 @@ bool Graph::isCyclicUtil(int v, bool visited[], bool *recStack)
         list<int>::iterator i;
         for(i = adj[v].begin(); i != adj[v].end(); ++i)
         {
-            //z 17-05-20 18 如果该点已经访问过，那么返回 true 
-            //z 17-05-20 18 或者该接点向下遍历的路径有环，那么返回 true 
+            //z 17-05-20 18 如果该点已经访问过，那么返回 true
+            //z 17-05-20 18 或者该接点向下遍历的路径有环，那么返回 true
             if ( !visited[*i] && isCyclicUtil(*i, visited, recStack) )
-			{
-				return true;
-			}
+            {
+                return true;
+            }
             else
             {
-				//z 17-05-20 18 或者在dfs遍历路径上已经有了该节点，那么返回true
+                //z 17-05-20 18 或者在dfs遍历路径上已经有了该节点，那么返回true
                 if (recStack[*i])
                 {
                     return true;
@@ -71,8 +71,8 @@ bool Graph::isCyclicUtil(int v, bool visited[], bool *recStack)
         }
 
     }
-	
-	//z 17-05-20 18 从该节点遍历完毕，没有发现环，则将该节点从栈上移除
+
+    //z 17-05-20 18 从该节点遍历完毕，没有发现环，则将该节点从栈上移除
     recStack[v] = false;  // remove the vertex from recursion stack
     return false;
 }

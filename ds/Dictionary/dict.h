@@ -50,13 +50,15 @@
 /*
  * 哈希表节点
  */
-typedef struct dictEntry {
+typedef struct dictEntry
+{
 
     // 键
     void *key;
 
     // 值
-    union {
+    union
+    {
         void *val;
         uint64_t u64;
         int64_t s64;
@@ -70,7 +72,8 @@ typedef struct dictEntry {
 /*
  * 特定于类型的一簇处理函数
  */
-typedef struct dictType {
+typedef struct dictType
+{
     // 计算键的哈希值函数, 计算key在hash table中的存储位置，不同的dict可以有不同的hash function.
     unsigned int (*hashFunction)(const void *key);
     // 复制键的函数
@@ -88,7 +91,8 @@ typedef struct dictType {
 /*
  * 哈希表
  */
-typedef struct dictht {
+typedef struct dictht
+{
 
     // 哈希表节点指针数组（俗称桶，bucket）
     dictEntry **table;
@@ -109,7 +113,8 @@ typedef struct dictht {
  *
  * 每个字典使用两个哈希表，用于实现渐进式 rehash
  */
-typedef struct dict {
+typedef struct dict
+{
 
     // 特定于类型的处理函数
     dictType *type;
@@ -137,7 +142,8 @@ typedef struct dict {
  * 如果 safe 属性的值为 0 ，那么表示这不是一个安全迭代器。
  * 如果正在运作的迭代器是不安全迭代器，那么它只可以对字典调用 dictNext 函数。
  */
-typedef struct dictIterator {
+typedef struct dictIterator
+{
 
     // 正在迭代的字典
     dict *d;

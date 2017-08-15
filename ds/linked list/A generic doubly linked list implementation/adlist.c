@@ -72,7 +72,8 @@ void listRelease(list *list)
     current = list->head;
     //z 记住len
     len = list->len;
-    while(len--) {
+    while(len--)
+    {
         //z 先保存下一个节点
         next = current->next;
         // 如果列表有自带的 free 方法，那么先对节点值调用它
@@ -103,11 +104,14 @@ list *listAddNodeHead(list *list, void *value)
     node->value = value;
 
     //z 是否是第一个节点
-    if (list->len == 0) {
+    if (list->len == 0)
+    {
         // 第一个节点
         list->head = list->tail = node;
         node->prev = node->next = NULL;
-    } else {
+    }
+    else
+    {
         // 不是第一个节点
         node->prev = NULL;
         node->next = list->head;
@@ -137,11 +141,14 @@ list *listAddNodeTail(list *list, void *value)
 
     node->value = value;
 
-    if (list->len == 0) {
+    if (list->len == 0)
+    {
         // 第一个节点
         list->head = list->tail = node;
         node->prev = node->next = NULL;
-    } else {
+    }
+    else
+    {
         // 不是第一个节点
         node->prev = list->tail;
         node->next = NULL;
@@ -160,7 +167,8 @@ list *listAddNodeTail(list *list, void *value)
  *
  * T = O(1)
  */
-list *listInsertNode(list *list, listNode *old_node, void *value, int after) {
+list *listInsertNode(list *list, listNode *old_node, void *value, int after)
+{
     listNode *node;
 
     if ((node = zmalloc(sizeof(*node))) == NULL)
@@ -168,29 +176,36 @@ list *listInsertNode(list *list, listNode *old_node, void *value, int after) {
 
     node->value = value;
 
-    if (after) {
+    if (after)
+    {
         // 插入到 old_node 之后
         node->prev = old_node;
         node->next = old_node->next;
         // 处理表尾节点
-        if (list->tail == old_node) {
+        if (list->tail == old_node)
+        {
             list->tail = node;
         }
-    } else {
+    }
+    else
+    {
         // 插入到 old_node 之前
         node->next = old_node;
         node->prev = old_node->prev;
         // 处理表头节点
-        if (list->head == old_node) {
+        if (list->head == old_node)
+        {
             list->head = node;
         }
     }
 
     // 更新前置节点和后继节点的指针
-    if (node->prev != NULL) {
+    if (node->prev != NULL)
+    {
         node->prev->next = node;
     }
-    if (node->next != NULL) {
+    if (node->next != NULL)
+    {
         node->next->prev = node;
     }
 
@@ -232,7 +247,7 @@ void listDelNode(list *list, listNode *node)
 
 /*
 * 创建列表 list 的一个迭代器，迭代方向由参数 direction 决定
-* 
+*
 * 每次对迭代器调用 listNext() ，迭代器就返回列表的下一个节点
 *
 * 这个函数不处理失败情形
@@ -242,7 +257,7 @@ void listDelNode(list *list, listNode *node)
 listIter *listGetIterator(list *list, int direction)
 {
     listIter *iter;
-    
+
     if ((iter = zmalloc(sizeof(*iter))) == NULL) return NULL;
 
     // 根据迭代的方向，将迭代器的指针指向表头或者表尾
@@ -262,7 +277,8 @@ listIter *listGetIterator(list *list, int direction)
  *
  * T = O(1)
  */
-void listReleaseIterator(listIter *iter) {
+void listReleaseIterator(listIter *iter)
+{
     zfree(iter);
 }
 
@@ -271,7 +287,8 @@ void listReleaseIterator(listIter *iter) {
  *
  * T = O(1)
  */
-void listRewind(list *list, listIter *li) {
+void listRewind(list *list, listIter *li)
+{
     li->next = list->head;
     li->direction = AL_START_HEAD;
 }
@@ -281,7 +298,8 @@ void listRewind(list *list, listIter *li) {
  *
  * T = O(1)
  */
-void listRewindTail(list *list, listIter *li) {
+void listRewindTail(list *list, listIter *li)
+{
     li->next = list->tail;
     li->direction = AL_START_TAIL;
 }
@@ -292,7 +310,7 @@ void listRewindTail(list *list, listIter *li) {
  * 可以使用 listDelNode() 删除当前节点，但是不可以删除其他节点。
  *
  * 函数要么返回当前节点，要么返回 NULL ，因此，常见的用法是：
- * 
+ *
  * iter = listGetIterator(list,<direction>);
  * while ((node = listNext(iter)) != NULL) {
  *     doSomethingWith(listNodeValue(node));
@@ -304,7 +322,8 @@ listNode *listNext(listIter *iter)
 {
     listNode *current = iter->next;
 
-    if (current != NULL) {
+    if (current != NULL)
+    {
         // 根据迭代方向，选择节点
         if (iter->direction == AL_START_HEAD)
             iter->next = current->next;
@@ -338,23 +357,28 @@ list *listDup(list *orig)
 
     // 复制节点
     iter = listGetIterator(orig, AL_START_HEAD);
-    while((node = listNext(iter)) != NULL) {
+    while((node = listNext(iter)) != NULL)
+    {
 
         // 复制节点值
         void *value;
-        
-        if (copy->dup) {
+
+        if (copy->dup)
+        {
             value = copy->dup(node->value);
-            if (value == NULL) {
+            if (value == NULL)
+            {
                 listRelease(copy);
                 listReleaseIterator(iter);
                 return NULL;
             }
-        } else
+        }
+        else
             value = node->value;
-        
+
         // 将新节点添加到新列表末尾
-        if (listAddNodeTail(copy, value) == NULL) {
+        if (listAddNodeTail(copy, value) == NULL)
+        {
             listRelease(copy);
             listReleaseIterator(iter);
             return NULL;
@@ -384,16 +408,22 @@ listNode *listSearchKey(list *list, void *key)
 
     // 使用迭代器查找
     iter = listGetIterator(list, AL_START_HEAD);
-    while((node = listNext(iter)) != NULL) {
-        if (list->match) {
+    while((node = listNext(iter)) != NULL)
+    {
+        if (list->match)
+        {
             // 使用列表自带的匹配器进行比对
-            if (list->match(node->value, key)) {
+            if (list->match(node->value, key))
+            {
                 listReleaseIterator(iter);
                 return node;
             }
-        } else {
+        }
+        else
+        {
             // 直接用列表的值来比对
-            if (key == node->value) {
+            if (key == node->value)
+            {
                 listReleaseIterator(iter);
                 return node;
             }
@@ -415,14 +445,18 @@ listNode *listSearchKey(list *list, void *key)
  *
  * T = O(N)，N 为列表的长度
  */
-listNode *listIndex(list *list, long index) {
+listNode *listIndex(list *list, long index)
+{
     listNode *n;
 
-    if (index < 0) {
+    if (index < 0)
+    {
         index = (-index)-1;
         n = list->tail;
         while(index-- && n) n = n->prev;
-    } else {
+    }
+    else
+    {
         n = list->head;
         while(index-- && n) n = n->next;
     }
@@ -435,7 +469,8 @@ listNode *listIndex(list *list, long index) {
  *
  * T = O(1)
  */
-void listRotate(list *list) {
+void listRotate(list *list)
+{
     listNode *tail = list->tail;
 
     // 列表只有一个元素
