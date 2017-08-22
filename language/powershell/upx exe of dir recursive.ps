@@ -1,0 +1,7 @@
+# 2017-08-22
+
+<#
+.SYNOPSIS
+upx exe file recursive.
+#>
+Get-ChildItem -Path ".\" -Filter *.exe -r | % { upx $_.FullName }
