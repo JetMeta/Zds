@@ -40,11 +40,15 @@
 	   Zcl_S : //z 17-07-14 14:58:07 L.170'32513 T2965614173.K ~0   --+----+----+----+----+----+
 	   Zcl_E : //z 17-07-14 14:58:07 L.170'32513 T2965614173.K ~0   --+----+----+----+----+----+
 	  ZdoIdx : //z 17-07-14 16:26:02 L.170'27238 T1249953173.K ~1   --+----+----+----+----+----+
-	  KmtIdx : //z 17-07-14 15:09:46 L.170'31814 T4251188605.K ~5   --+----+----+----+----+----+
+      KmtIdx : //z 17-09-08 10:06:24 L.114'50016 T2785725078.K ~6   --+----+----+----+----+----+
 	 TimeCnt : //z 17-07-14 15:51:13 L.170'29327 T4256830612.K ~3   --+----+----+----+----+----+
-	 Reg.Cnt : //z 17-07-14 16:27:50 L.170'27130 T1249989273.K ~12  --+----+----+----+----+----+
+     Reg.Cnt : //z 17-09-08 10:05:14 L.114'50086 T2785689108.K ~13  --+----+----+----+----+----+
 	 File.Op : //z 17-07-14 14:58:07 L.170'32513 T2965614173.K ~0   --+----+----+----+----+----+
-     Version : //z 17-08-15 17:39:27 L.138'22833 T3942144739.K ~334     R+.12   L+.716  --+----+
+     Version : //z 17-09-08 10:15:15 L.114'49485 T2786875030.K ~385     R+.13   L+.809  --+----+
+     #20  V+ : //z 17-09-08 10:14:21 L.114'49539 T2786839122.K ~380     R+.8    L+.556  
+     #19  V+ : //z 17-09-08 10:09:52 L.114'49808 T2785832986.K ~361     R+.13   L+.787  
+     #18  V+ : //z 17-09-08 10:06:23 L.114'50017 T2785725077.K ~342     R+.13   L+.732  
+     #17  R+ : //z 17-09-08 10:05:14 L.114'50086 T2785689108.K ~336     R+.13   L+.720  V+.336  
 	 #17  V+ : //z 17-07-14 16:44:18 L.170'26142 T1252253180.K ~323     R+.11   L+.134  
 	 #16  V+ : //z 17-07-14 16:29:08 L.170'27052 T1250060990.K ~304     R+.12   L+.693  
 	 #15  R+ : //z 17-07-14 16:27:50 L.170'27130 T1249989273.K ~285     R+.12   L+.642  V+.285  
@@ -74,28 +78,29 @@
 	 #1   V+ : //z 17-07-14 15:03:13 L.170'32207 T4250972881.K ~19      R+.1    L+.75   
 	 #0   R+ : //z 17-07-14 14:58:13 L.170'32507 T2965614202.K ~5       R+.1    L+.64   V+.5    
 	 Zndex_S : //z 17-07-14 14:58:07 L.170'32513 T2965614173.K ~0   --+----+----+----+----+----+
-      L105,  1: 07-14 R#.10   @第2017年总结
-      L139,  2: 07-14 R#.11   @第2017.07月总结
-      L149,  3: 2017-07-14 todo zn#1 todo algo 算法 给了解一遍：功能；实现；例程。z%5 zsub 2017-07-14
-      L150,  4: 2017-07-14 todo zn#1 todo algo 算法
-      L164,  5: 07-14 R#.1    @lower_bound
-      L240,  6: 07-14 R#.2    @upper_bound
-      L271,  7: 07-14 R#.3    @equal_range
-      L273,  8: 07-14 znote 使用时要求数组已排序。
-      L326,  9: 07-14 R#.4    @is_partitioned
-      L391, 10: 07-14 R#.5    @partition
-      L456, 11: 07-14 R#.6    @reverse
-      L499, 12: 07-14 R#.7    @reverse_copy
-      L549, 13: 07-14 R#.8    @min_element max_element
-      L601, 14: 07-14 R#.9    @binary_search
-      L657, 15: 07-14 R#.12   @for_each
-     Zndex_E : //z 17-08-15 17:39:27 L.138'22833 T3942144739.K ~322 --+----+----+----+----+----+
+      L109,  1: 07-14 R#.10   @第2017年总结
+      L143,  2: 07-14 R#.11   @第2017.07月总结
+      L153,  3: 2017-07-14 todo zn#1 todo algo 算法 给了解一遍：功能；实现；例程。z%5 zsub 2017-07-14
+      L154,  4: 2017-07-14 todo zn#1 todo algo 算法
+      L168,  5: 07-14 R#.1    @lower_bound
+      L245,  6: 07-14 R#.2    @upper_bound
+      L276,  7: 07-14 R#.3    @equal_range
+      L278,  8: 07-14 znote 使用时要求数组已排序。
+      L331,  9: 07-14 R#.4    @is_partitioned
+      L396, 10: 07-14 R#.5    @partition
+      L461, 11: 07-14 R#.6    @reverse
+      L504, 12: 07-14 R#.7    @reverse_copy
+      L554, 13: 07-14 R#.8    @min_element max_element
+      L606, 14: 07-14 R#.9    @binary_search
+      L662, 15: 07-14 R#.12   @for_each
+      L722, 16: 09-08 R#.13   @std::max_element min_element ，这里给出了max_element，min类似max
+     Zndex_E : //z 17-09-08 10:15:15 L.114'49485 T2786875030.K ~372 --+----+----+----+----+----+
 	 K   Ter : //z 17-07-14 14:58:07 L.170'32513 T2965614173.K ~0   --+----+----+----+----+----+
 	 K  Mers : //z 17-07-14 14:58:07 L.170'32513 T2965614173.K ~0   --+----+----+----+----+----+
 	 K Kersi : //z 17-07-14 14:58:07 L.170'32513 T2965614173.K ~0   --+----+----+----+----+----+
 	 KVersio : //z 17-07-14 14:58:07 L.170'32513 T2965614173.K ~0   --+----+----+----+----+----+
 	 K Versi : //z 17-07-14 14:58:07 L.170'32513 T2965614173.K ~0   --+----+----+----+----+----+
-	 K  Vers : //z 17-07-14 14:58:07 L.170'32513 T2965614173.K ~0   --+----+----+----+----+----+
+     K  Vers : //z 17-09-08 10:06:59 L.114'49981 T2785725182.K ~347     R+.13   L+.729  
 	 K   Ver : //z 17-07-14 16:25:45 L.170'27255 T1249917371.K ~263     R+.0    L+.84
 	 K    Ve : //z 17-07-14 15:44:01 L.170'29759 T4255752467.K ~149     R+.4    L+.258
 	 K     V : //z 17-07-14 15:15:37 L.170'31463 T4252230746.K ~73      R+.2    L+.145
@@ -223,6 +228,7 @@ int main ()
     std::vector<int>::iterator low,up;
     //k 2017-07-14 15:09 zn#5 找到 20 的下边界，不小于20的值
     low=std::lower_bound (v.begin(), v.end(), 20); //          ^
+	//k 2017-09-08 10:11 zn#5 找到第一个大于20的值
     up= std::upper_bound (v.begin(), v.end(), 20); //                   ^
 
     std::cout << "lower_bound at position " << (low- v.begin()) << '\n';
@@ -548,6 +554,7 @@ myvector contains: 9 8 7 6 5 4 3 2 1
 
 #region 07-14 R#.8    @min_element max_element
 01.
+2017-09-08 10:14 发现这里记过一次，忘。
 min_element 返回区间内的最小值
 max_element 返回区间内的最大值
 
@@ -713,3 +720,99 @@ Output:
 myvector contains: 10 20 30
 myvector contains: 10 20 30
 #endregion //z 2017-07-14 16:27:50 L.170'27130 BG57IV3 T1249989273.K.F3427031612+----+----+----+
+
+#region 09-08 R#.13   @std::max_element min_element ，这里给出了max_element，min类似max
+01. 
+function template
+<algorithm>
+
+std::max_element
+
+default (1)	
+template <class ForwardIterator>
+  ForwardIterator max_element (ForwardIterator first, ForwardIterator last);
+custom (2)
+template <class ForwardIterator, class Compare>
+  ForwardIterator max_element (ForwardIterator first, ForwardIterator last,
+                               Compare comp);
+
+//k 2017-09-08 10:06 zn#6 找出区间的最大元素。
+Return largest element in range
+Returns an iterator pointing to the element with the largest value in the range [first,last).
+
+The comparisons are performed using either operator< for the first version, or comp for the second; An element is the largest if no other element does not compare less than it. If more than one element fulfills this condition, the iterator returned points to the first of such elements.
+
+The behavior of this function template is equivalent to:
+template <class ForwardIterator>
+  ForwardIterator max_element ( ForwardIterator first, ForwardIterator last )
+{
+  if (first==last) return last;
+  ForwardIterator largest = first;
+
+  while (++first!=last)
+    if (*largest<*first)    // or: if (comp(*largest,*first)) for version (2)
+      largest=first;
+  return largest;
+}
+
+Parameters
+first, last
+Input iterators to the initial and final positions of the sequence to compare. The range used is [first,last), which contains all the elements between first and last, including the element pointed by first but not the element pointed by last.
+
+comp
+Binary function that accepts two elements in the range as arguments, and returns a value convertible to bool. The value returned indicates whether the element passed as first argument is considered less than the second.
+The function shall not modify any of its arguments.
+This can either be a function pointer or a function object.
+
+Return value
+An iterator to largest value in the range, or last if the range is empty.
+
+Example
+// min_element/max_element example
+#include <iostream>     // std::cout
+#include <algorithm>    // std::min_element, std::max_element
+
+bool myfn(int i, int j)
+{
+    return i<j;
+}
+
+struct myclass
+{
+    bool operator() (int i,int j)
+    {
+        return i<j;
+    }
+} myobj;
+
+int main ()
+{
+    int myints[] = {3,7,2,5,6,4,9};
+
+	//k 2017-09-08 10:09 zn#6 使用默认函数
+    // using default comparison:
+    std::cout << "The smallest element is " << *std::min_element(myints,myints+7) << '\n';
+    std::cout << "The largest element is "  << *std::max_element(myints,myints+7) << '\n';
+
+	//k 2017-09-08 10:09 zn#6 使用函数作为比较函数
+    // using function myfn as comp:
+    std::cout << "The smallest element is " << *std::min_element(myints,myints+7,myfn) << '\n';
+    std::cout << "The largest element is "  << *std::max_element(myints,myints+7,myfn) << '\n';
+
+	//k 2017-09-08 10:09 zn#6 使用仿函数作为比较函数
+    // using object myobj as comp:
+    std::cout << "The smallest element is " << *std::min_element(myints,myints+7,myobj) << '\n';
+    std::cout << "The largest element is "  << *std::max_element(myints,myints+7,myobj) << '\n';
+
+    return 0;
+}
+Edit & Run
+
+Output:
+The smallest element is 2
+The largest element is 9
+The smallest element is 2
+The largest element is 9
+The smallest element is 2
+The largest element is 9
+#endregion //z 2017-09-08 10:05:14 L.114'50086 BG57IV3 T2785689108.K.F655786715 +----+----+----+
