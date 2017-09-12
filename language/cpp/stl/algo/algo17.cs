@@ -42,9 +42,13 @@
 	  ZdoIdx : //z 17-07-14 16:26:02 L.170'27238 T1249953173.K ~1   --+----+----+----+----+----+
       KmtIdx : //z 17-09-08 10:06:24 L.114'50016 T2785725078.K ~6   --+----+----+----+----+----+
 	 TimeCnt : //z 17-07-14 15:51:13 L.170'29327 T4256830612.K ~3   --+----+----+----+----+----+
-     Reg.Cnt : //z 17-09-08 10:05:14 L.114'50086 T2785689108.K ~13  --+----+----+----+----+----+
+     Reg.Cnt : //z 17-09-12 16:08:29 L.110'28291 T3775307358.K ~15  --+----+----+----+----+----+
 	 File.Op : //z 17-07-14 14:58:07 L.170'32513 T2965614173.K ~0   --+----+----+----+----+----+
-     Version : //z 17-09-11 16:40:32 L.111'26368 T3711962195.K ~386     R+.3    L+.324  --+----+
+     Version : //z 17-09-12 17:14:46 L.110'24314 T772850267 .K ~434     R+.15   L+.914  --+----+
+     #22  V+ : //z 17-09-12 16:10:24 L.110'28176 T3776205778.K ~418     R+.15   L+.885  
+     #21  R+ : //z 17-09-12 16:08:29 L.110'28291 T3775307358.K ~410     R+.15   L+.885  V+.410  
+     #21  V+ : //z 17-09-12 16:05:07 L.110'28493 T3775199479.K ~399     R+.14   L+.835  
+     #20  R+ : //z 17-09-12 16:03:59 L.110'28561 T3775127772.K ~388     R+.14   L+.824  V+.388  
      #20  V+ : //z 17-09-08 10:14:21 L.114'49539 T2786839122.K ~380     R+.8    L+.556  
      #19  V+ : //z 17-09-08 10:09:52 L.114'49808 T2785832986.K ~361     R+.13   L+.787  
      #18  V+ : //z 17-09-08 10:06:23 L.114'50017 T2785725077.K ~342     R+.13   L+.732  
@@ -78,23 +82,23 @@
 	 #1   V+ : //z 17-07-14 15:03:13 L.170'32207 T4250972881.K ~19      R+.1    L+.75   
 	 #0   R+ : //z 17-07-14 14:58:13 L.170'32507 T2965614202.K ~5       R+.1    L+.64   V+.5    
 	 Zndex_S : //z 17-07-14 14:58:07 L.170'32513 T2965614173.K ~0   --+----+----+----+----+----+
-      L109,  1: 07-14 R#.10   @第2017年总结
-      L143,  2: 07-14 R#.11   @第2017.07月总结
-      L153,  3: 2017-07-14 todo zn#1 todo algo 算法 给了解一遍：功能；实现；例程。z%5 zsub 2017-07-14
-      L154,  4: 2017-07-14 todo zn#1 todo algo 算法
-      L168,  5: 07-14 R#.1    @lower_bound
-      L245,  6: 07-14 R#.2    @upper_bound
-      L276,  7: 07-14 R#.3    @equal_range
-      L278,  8: 07-14 znote 使用时要求数组已排序。
-      L331,  9: 07-14 R#.4    @is_partitioned
-      L396, 10: 07-14 R#.5    @partition
-      L461, 11: 07-14 R#.6    @reverse
-      L504, 12: 07-14 R#.7    @reverse_copy
-      L554, 13: 07-14 R#.8    @min_element max_element
-      L606, 14: 07-14 R#.9    @binary_search
-      L662, 15: 07-14 R#.12   @for_each
-      L722, 16: 09-08 R#.13   @std::max_element min_element ，这里给出了max_element，min类似max
-     Zndex_E : //z 17-09-11 16:40:32 L.111'26368 T3711962195.K ~373 --+----+----+----+----+----+
+      L110,  1: 07-14 R#.10   @第2017年总结
+      L144,  2: 07-14 R#.11   @第2017.07月总结
+      L154,  3: 2017-07-14 todo zn#1 todo algo 算法 给了解一遍：功能；实现；例程。z%5 zsub 2017-07-14
+      L155,  4: 2017-07-14 todo zn#1 todo algo 算法
+      L169,  5: 07-14 R#.1    @lower_bound
+      L246,  6: 07-14 R#.2    @upper_bound
+      L277,  7: 07-14 R#.3    @equal_range
+      L279,  8: 07-14 znote 使用时要求数组已排序。
+      L333,  9: 07-14 R#.4    @is_partitioned
+      L398, 10: 07-14 R#.5    @partition
+      L463, 11: 07-14 R#.6    @reverse
+      L506, 12: 07-14 R#.7    @reverse_copy
+      L556, 13: 07-14 R#.8    @min_element max_element
+      L609, 14: 07-14 R#.9    @binary_search
+      L665, 15: 07-14 R#.12   @for_each
+      L725, 16: 09-08 R#.13   @std::max_element min_element ，这里给出了max_element，min类似max
+     Zndex_E : //z 17-09-12 17:14:46 L.110'24314 T772850267 .K ~419 --+----+----+----+----+----+
 	 K   Ter : //z 17-07-14 14:58:07 L.170'32513 T2965614173.K ~0   --+----+----+----+----+----+
 	 K  Mers : //z 17-07-14 14:58:07 L.170'32513 T2965614173.K ~0   --+----+----+----+----+----+
 	 K Kersi : //z 17-07-14 14:58:07 L.170'32513 T2965614173.K ~0   --+----+----+----+----+----+
@@ -817,3 +821,95 @@ The largest element is 9
 The smallest element is 2
 The largest element is 9
 #endregion //z 2017-09-08 10:05:14 L.114'50086 BG57IV3 T2785689108.K.F655786715 +----+----+----+
+
+#region 09-12 R#.14   @std::iota
+01. 填充 [)，随着填充进行，value的值增加1。
+
+Defined in header <numeric>，在该文件头定义。
+
+Fills the range [first, last) with sequentially increasing values, starting with value and repetitively evaluating ++value.
+Equivalent operation:
+*(d_first)   = value;
+*(d_first+1) = ++value;
+*(d_first+2) = ++value;
+*(d_first+3) = ++value;
+...
+
+Parameters
+first, last	-	the range of elements to fill with sequentially increasing values starting with value
+value	-	initial value to store, the expression ++value must be well-formed
+
+02. 可能的实现
+template<class ForwardIterator, class T>
+void iota(ForwardIterator first, ForwardIterator last, T value)
+{
+    while(first != last)
+    {
+        *first++ = value;
+        ++value;
+    }
+}
+
+03. 例程
+#include <algorithm>
+#include <iostream>
+#include <list>
+#include <numeric>
+#include <random>
+#include <vector>
+
+int main()
+{
+    std::list<int> l(10);
+    std::iota(l.begin(), l.end(), -4);
+
+    std::vector<std::list<int>::iterator> v(l.size());
+    std::iota(v.begin(), v.end(), l.begin());
+
+    std::shuffle(v.begin(), v.end(), std::mt19937{std::random_device{}()});
+
+    std::cout << "Contents of the list: ";
+    for(auto n: l) std::cout << n << ' ';
+    std::cout << '\n';
+
+    std::cout << "Contents of the list, shuffled: ";
+    for(auto i: v) std::cout << *i << ' ';
+    std::cout << '\n';
+}
+输出：
+Contents of the list: -4 -3 -2 -1 0 1 2 3 4 5
+Contents of the list, shuffled: 0 -1 3 4 -4 1 -2 -3 2 5
+#endregion //z 2017-09-12 16:03:59 L.110'28561 BG57IV3 T3775127772.K.F655786715 +----+----+----+
+
+#region 09-12 R#.15   @c++ 11 提供了 stoi 以及 to_string 以在整数和string间进行转换
+01. 
+to_string 包含在 <string> 中。共有如下这些形式
+string to_string (int val);
+string to_string (long val);
+string to_string (long long val);
+string to_string (unsigned val);
+string to_string (unsigned long val);
+string to_string (unsigned long long val);
+string to_string (float val);
+string to_string (double val);
+string to_string (long double val);
+
+stoi 同样包含在 <string> 中。同类型函数总结如下：
+stod
+stof
+stoi
+stol
+stold
+stoll
+stoul
+stoull
+
+C++11 introduces std::stoi (and variants for each numeric type) and std::to_string, the counterparts of the C atoi and itoa but expressed in term of std::string.
+
+#include <string> 
+
+std::string s = std::to_string(42);
+is therefore the shortest way I can think of.
+
+其他类似的函数还有 fill、generate 等
+#endregion //z 2017-09-12 16:08:29 L.110'28291 BG57IV3 T3775307358.K.F655786715 +----+----+----+
