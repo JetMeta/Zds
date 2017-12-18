@@ -41,9 +41,9 @@
       ZdoIdx : //z 17-07-12 16:20:06 L.172'27594 T1114134801.K ~0   --+----+----+----+----+----+
       KmtIdx : //z 17-07-12 16:20:06 L.172'27594 T1114134801.K ~0   --+----+----+----+----+----+
      TimeCnt : //z 17-07-12 16:20:36 L.172'27564 T1114134900.K ~1   --+----+----+----+----+----+
-     Reg.Cnt : //z 17-11-02 13:29:41 L.59 '37819 T891805200 .K ~8   --+----+----+----+----+----+
+     Reg.Cnt : //z 17-12-18 14:58:28 L.13 '32492 T1867709760.K ~10  --+----+----+----+----+----+
      File.Op : //z 17-07-12 16:20:06 L.172'27594 T1114134801.K ~0   --+----+----+----+----+----+
-     Version : //z 17-11-02 13:30:15 L.59 '37785 T892667593 .K ~100     R+.8    L+.367  --+----+
+     Version : //z 17-12-18 16:14:11 L.13 '27949 T150790930 .K ~115     R+.9    L+.372  --+----+
      #5   R+ : //z 17-11-02 13:29:41 L.59 '37819 T891805200 .K ~95      R+.8    L+.367  V+.95   
      #4   R+ : //z 17-08-15 17:30:58 L.138'23342 T3941821406.K ~87      R+.7    L+.352  V+.87   
      #4   R+ : //z 17-08-15 17:28:36 L.138'23484 T3940922913.K ~79      R+.6    L+.332  V+.79   
@@ -63,7 +63,7 @@
       L313,  5: 08-15 R#.5    @to_string
       L335,  6: 08-15 R#.6    @字符串的连接
       L354,  7: 08-15 R#.7    @将string转换为数
-     Zndex_E : //z 17-11-02 13:30:15 L.59 '37785 T892667593 .K ~92  --+----+----+----+----+----+
+     Zndex_E : //z 17-12-18 16:14:11 L.13 '27949 T150790930 .K ~105 --+----+----+----+----+----+
      K   Ter : //z 17-07-12 16:20:06 L.172'27594 T1114134801.K ~0   --+----+----+----+----+----+
      K  Mers : //z 17-07-12 16:20:06 L.172'27594 T1114134801.K ~0   --+----+----+----+----+----+
      K Kersi : //z 17-07-12 16:20:06 L.172'27594 T1114134801.K ~0   --+----+----+----+----+----+
@@ -366,3 +366,19 @@ strtof Convert string to float (function )
 01. 
 string str(10,'\0');
 #endregion //z 2017-11-02 13:29:41 L.59 '37819 BG57IV3 T891805200 .K.F1356759619+----+----+----+
+
+#region 12-18 R#.9  @substr
+01. 
+str.substr(3,7);
+str.substr(3); // to end
+#endregion //z 2017-12-18 13:50:32 L.13 '36568 BG57IV3 T575954322 .K.F1356759619[V101]----+----+
+
+#region 12-18 R#.10 @'reset' a stringstream
+01. 
+Typically to 'reset' a stringstream you need to both reset the underlying sequence to an empty string with str and to clear any fail and eof flags with clear.
+
+parser.str( std::string() );
+parser.clear();
+
+Typically what happens is that the first >> reaches the end of the string and sets the eof bit, although it successfully parses the first short. Operations on the stream after this immediately fail because the stream's eof bit is still set.
+#endregion //z 2017-12-18 14:58:28 L.13 '32492 BG57IV3 T1867709760.K.F1356759619[V104]----+----+
