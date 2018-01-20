@@ -1,0 +1,27 @@
+1.安装虚拟网卡miredo
+
+sudo apt-get install miredo
+2.查看网卡配置
+
+ifconfig
+
+在结果中应该能看见一个叫 teredo 的虚拟网卡
+3.启动miredo（重启后有可能需要手动启动）
+
+sudo miredo
+
+4. 可能需要重启网络服务1.安装虚拟网卡miredo
+
+sudo apt-get install miredo
+2.查看网卡配置
+
+ifconfig
+
+在结果中应该能看见一个叫 teredo 的虚拟网卡
+3.启动miredo（重启后有可能需要手动启动）
+
+sudo miredo
+
+4. 可能需要重启网络
+sudo /etc/init.d/networking restart
+sudo /etc/init.d/networking restart
